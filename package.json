@@ -2,10 +2,14 @@
   "name": "vimgolf-caddie",
   "version": "0.0.1",
   "description": "A small tool to help going through http://vimgolf.com challenges",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "me@lazywithclass.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "request": "~2.34.0",
+    "cheerio": "~0.13.1",
+    "async": "~0.2.10"
+  }
 }
