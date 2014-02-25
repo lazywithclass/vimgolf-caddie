@@ -6,9 +6,7 @@ Know what challenges you still have to solve on http://vimgolf.com
 
 Put it somewhere and 
 
- * run `npm install` inside it
  * at the beginning of the file insert your vimgolf nickname
- * `npm install`
  * `npm start`
  * profit. 
 
