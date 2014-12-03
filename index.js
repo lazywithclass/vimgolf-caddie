@@ -18,16 +18,12 @@ function fetchChallenges(callback) {
         "description": $this.find('p').html()
       });
     });
-
     callback(null, output);
   });
-
 }
 
 function fetchCompletedChallenges(callback) {
-
   request('http://vimgolf.com/' + USERNAME, function(err, res, body) {
-
     var $ = cheerio.load(body),
       output = {},
       completed = [];
@@ -37,7 +33,6 @@ function fetchCompletedChallenges(callback) {
     });
     callback(null, completed);
   });
-
 }
 
 async.parallel([fetchChallenges, fetchCompletedChallenges], function(err, results) {
@@ -46,7 +41,6 @@ async.parallel([fetchChallenges, fetchCompletedChallenges], function(err, result
     uncompletedChallenges = allChallenges.filter(function(challenge) {
       return completedChallenges.indexOf(challenge.url) === -1;
     });
-
   uncompletedChallenges.forEach(function(challenge) {
     console.log('');
     console.log('http://vimgolf.com' + challenge.url);
